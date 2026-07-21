@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>রোমান্টিক AI ভিডিও স্ক্রিপ্ট — ৫০টি</title>
+<style>
+  :root{
+    --ink:#2b1f2e;
+    --paper:#fbf3ec;
+    --rose:#b23a5c;
+    --rose-deep:#7d1f3c;
+    --gold:#c98a3e;
+    --line:#e4cfc2;
+    --card:#fffaf6;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--paper);
+    background-image:
+      radial-gradient(circle at 10% 0%, rgba(178,58,92,0.06), transparent 40%),
+      radial-gradient(circle at 90% 100%, rgba(201,138,62,0.08), transparent 40%);
+    color: var(--ink);
+    font-family: 'Noto Serif Bengali', 'Hind Siliguri', 'Segoe UI', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom: 80px;
+  }
+  header{
+    padding: 28px 18px 20px;
+    text-align:center;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255,255,255,0.6), transparent);
+  }
+  header .eyebrow{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform:uppercase;
+    color: var(--rose-deep);
+    opacity:0.75;
+  }
+  header h1{
+    font-size: clamp(1.5rem, 5vw, 2.1rem);
+    margin: 6px 0 4px;
+    color: var(--rose-deep);
+    font-weight:700;
+  }
+  header p{
+    margin:0;
+    font-size:13px;
+    color:#6b5a5f;
+    max-width:520px;
+    margin:0 auto;
+  }
+  .toolbar{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    align-items:center;
+    padding: 14px 16px;
+    flex-wrap:wrap;
+  }
+  .toolbar input{
+    flex:1 1 200px;
+    max-width:260px;
+    padding:9px 12px;
+    border-radius:10px;
+    border:1px solid var(--line);
+    background:var(--card);
+    font-size:14px;
+    color:var(--ink);
+  }
+  .toolbar .count{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--rose-deep);
+    background:rgba(178,58,92,0.08);
+    padding:6px 10px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  main{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4px 14px 40px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .card{
+    background: var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px 16px 16px;
+    box-shadow: 0 1px 2px rgba(60,20,30,0.04);
+    position:relative;
+  }
+  .card .num{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--gold);
+    letter-spacing:0.08em;
+  }
+  .card h2{
+    margin: 2px 0 10px;
+    font-size: 1.08rem;
+    color: var(--rose-deep);
+    font-weight:700;
+  }
+  .section-label{
+    font-family:var(--mono);
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color: var(--rose);
+    margin: 14px 0 6px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .section-label::before{
+    content:"";
+    width:14px;height:1px;
+    background:var(--rose);
+    display:inline-block;
+  }
+  .visual-block{
+    font-size:13.5px;
+    color:#4a3a3f;
+    background: rgba(201,138,62,0.06);
+    border-left: 2px solid var(--gold);
+    padding: 8px 10px;
+    border-radius: 0 8px 8px 0;
+  }
+  .visual-block ul{margin:6px 0 0; padding-left:18px;}
+  .visual-block li{margin-bottom:3px;}
+  .line-row{
+    display:grid;
+    grid-template-columns: 62px 1fr;
+    gap:8px;
+    padding:7px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size:13.5px;
+  }
+  .line-row:last-child{border-bottom:none;}
+  .ts{
+    font-family:var(--mono);
+    font-size:11px;
+    color:#9a8a8e;
+    padding-top:2px;
+  }
+  .speaker{
+    font-family:var(--mono);
+    font-size:10.5px;
+    color:var(--rose-deep);
+    font-weight:700;
+    margin-bottom:1px;
+  }
+  .bn{ font-size:14.5px; color:var(--ink); }
+  .translit{ font-size:12.5px; color:#8a6a70; font-style:italic; }
+  .en{ font-size:12.5px; color:#6b5a5f; }
+  .song-block{
+    background: linear-gradient(135deg, rgba(178,58,92,0.06), rgba(201,138,62,0.06));
+    border-radius:10px;
+    padding:10px 12px;
+    margin-top:6px;
+  }
+  .note{
+    font-size:12px;
+    color:#8a7378;
+    margin-top:10px;
+    padding-top:8px;
+    border-top:1px solid var(--line);
+  }
+  .copy-btn{
+    position:absolute;
+    top:14px;
+    right:14px;
+    background: var(--rose-deep);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:7px 12px;
+    font-size:12px;
+    font-family: 'Hind Siliguri','Segoe UI',sans-serif;
+    cursor:pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  .copy-btn:active{ transform: scale(0.96); }
+  .copy-btn.copied{ background: var(--gold); }
+  footer{
+    text-align:center;
+    font-size:11px;
+    color:#a08a8e;
+    padding: 18px;
+  }
+  @media (min-width:640px){
+    .line-row{grid-template-columns: 80px 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">AI Image-to-Video · 50 Scripts</div>
+  <h1>রোমান্টিক স্ক্রিপ্ট কালেকশন</h1>
+  <p>প্রতিটি স্ক্রিপ্ট একটি স্ট্যাটিক ইলাস্ট্রেশন অ্যানিমেট করার জন্য তৈরি — timestamp, বাংলা লাইন, transliteration, ও অনুবাদসহ। কপি বাটনে ট্যাপ করে সরাসরি পেস্ট করুন।</p>
+</header>
+
+<div class="toolbar">
+  <input id="searchBox" type="text" placeholder="থিম খুঁজুন… (e.g. rain, wedding)">
+  <span class="count" id="countLabel">৫০টি স্ক্রিপ্ট</span>
+</div>
+
+<main id="cardsContainer"></main>
+
+<footer>AI video generation reference · static-image animation only</footer>
+
+<script>
+const STILL_NOTE = "চরিত্ররা সম্পূর্ণ স্থির থাকবে — শুধু চুল ও পোশাকের হালকা নড়াচড়া এবং স্বাভাবিক চোখের পলক ছাড়া কোনো নড়াচড়া নেই। (Subjects remain completely still throughout — no movement except gentle hair/clothing sway and natural eye blinks.)";
+
+const scripts = [
+{
+  title:"লাইব্রেরিতে প্রথম দেখা",
+  theme:"bookstore first meeting",
+  setting:"একটি পুরনো বইয়ের দোকানের ভেতরে, কাঠের শেলফের সামনে, হালকা হলুদ আলো।",
+  manOutfit:"সাদা শার্ট, হাতা গোটানো, হাতে একটা বই।",
+  womanOutfit:"হালকা লাল সালোয়ার কামিজ, কাঁধে সাদা ওড়না, হাতে খোলা বই।",
+  pose:"দুজনে মুখোমুখি দাঁড়িয়ে, বইয়ের তাক ধরে হালকা হেসে একে অপরের দিকে তাকিয়ে আছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"এই বইটা তুমি পড়ছো?", tr:"Ei boita tumi porcho?", en:"Are you reading this book?"},
+    {t:"0:03 - 0:07", spk:"ছেলে", bn:"হ্যাঁ, কিন্তু তোমাকে দেখেই মন হারিয়ে ফেললাম।", tr:"Hae, kintu tomake dekhei mon hariye fellam.", en:"Yes, but I lost my mind the moment I saw you."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"বই পড়া বাদ দিয়ে আমাকে দেখছো?", tr:"Boi pora bad diye amake dekhcho?", en:"You stopped reading to look at me?"},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"তুমি তো বইয়ের চেয়েও সুন্দর গল্প।", tr:"Tumi to boyer cheyeo shundor golpo.", en:"You're a more beautiful story than any book."}
+  ],
+  song:{bn:"ভালোবাসা লেখা আছে চোখের পাতায় / তোমাকে দেখেই মন হারায় হারায়", tr:"Bhalobasha lekha ache chokher patay / tomake dekhei mon haray haray", en:"Love is written at the edge of my eyes / seeing you, my heart keeps losing itself"}
+},
+{
+  title:"বৃষ্টির দিনে ছাতা",
+  theme:"rainy day umbrella",
+  setting:"রাস্তার পাশে বৃষ্টির মধ্যে দাঁড়িয়ে, একটাই কালো ছাতার নিচে।",
+  manOutfit:"হালকা নীল শার্ট, একহাতে ছাতা ধরা।",
+  womanOutfit:"হলুদ সুতির শাড়ি, চুল থেকে জল গড়িয়ে পড়ছে এমন ভঙ্গি।",
+  pose:"একটা ছাতার নিচে গা ঘেঁষে দাঁড়িয়ে, মেয়েটি ছেলের কাঁধে মাথা রেখেছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"ছেলে", bn:"ছাতা তো একটাই, তুমি ভিজে যাবে।", tr:"Chata to ekta-i, tumi bhije jabe.", en:"There's only one umbrella, you'll get wet."},
+    {t:"0:04 - 0:08", spk:"মেয়ে", bn:"তোমার কাছে থাকলে ভিজতে ভয় নেই।", tr:"Tomar kache thakle bhijte bhoy nei.", en:"I'm not afraid of getting wet if I'm with you."},
+    {t:"0:08 - 0:12", spk:"ছেলে", bn:"তাহলে আজ সারাদিন এভাবেই থাকি চলো।", tr:"Tahole aj sharadin evabei thaki cholo.", en:"Then let's just stay like this all day."},
+    {t:"0:12 - 0:15", spk:"মেয়ে", bn:"বৃষ্টি থামলে কী হবে তখন?", tr:"Bristi thamle ki hobe tokhon?", en:"What happens when the rain stops?"}
+  ],
+  song:{bn:"বৃষ্টি এসে ভিজিয়ে দিক দুজনের মন / এক ছাতাতেই কেটে যাক এই জীবন", tr:"Bristi eshe bhijiye dik dujoner mon / ek chatatei kete jak ei jibon", en:"Let the rain soak both our hearts / let this life pass under one umbrella"}
+},
+{
+  title:"রান্নাঘরে গোলমাল",
+  theme:"cooking mishap",
+  setting:"ছোট্ট রান্নাঘরে, চুলার পাশে, হাতে ময়দা লেগে আছে।",
+  manOutfit:"অ্যাপ্রন পরা সাদা টি-শার্টের ওপর।",
+  womanOutfit:"সবুজ কুর্তি, হাতে খুন্তি।",
+  pose:"দুজনে চুলার সামনে দাঁড়িয়ে, মেয়েটি ছেলের গালে ময়দা লাগিয়ে দিচ্ছে হাসতে হাসতে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"তুমি তো রান্নাটাই পুড়িয়ে ফেললে!", tr:"Tumi to rannata-i puriye fele!", en:"You've completely burnt the food!"},
+    {t:"0:04 - 0:08", spk:"ছেলে", bn:"তোমার হাসি দেখতে গিয়ে খেয়াল ছিল না।", tr:"Tomar hashi dekhte giye kheyal chilo na.", en:"I was too busy watching you laugh to notice."},
+    {t:"0:08 - 0:11", spk:"মেয়ে", bn:"এই কথায় পোড়া রান্না ঠিক হয়ে যাবে?", tr:"Ei kothay pora ranna thik hoye jabe?", en:"Will saying that fix the burnt food?"},
+    {t:"0:11 - 0:15", spk:"ছেলে", bn:"না, কিন্তু আজ রাতে বাইরে খাওয়া যাবে।", tr:"Na, kintu aj rate baire khawa jabe.", en:"No, but tonight we can eat out instead."}
+  ],
+  song:{bn:"পোড়া রান্নাতেও থাক না লুকিয়ে হাসি / তোমার হাতেই তো ঘর হয়ে যায় বাড়ি", tr:"Pora rannateo thak na lukiye hashi / tomar hatei to ghor hoye jay bari", en:"Let laughter hide even in the burnt food / it's your hand that turns a house into home"}
+},
+{
+  title:"বিয়ের শাড়ি কেনা",
+  theme:"wedding sari shopping",
+  setting:"শাড়ির দোকানে, চারপাশে রঙিন শাড়ির স্তূপ।",
+  manOutfit:"সাদা পাঞ্জাবি।",
+  womanOutfit:"লাল কাতান শাড়ি গায়ে জড়িয়ে ধরে দেখছে।",
+  pose:"মেয়েটি আয়নার সামনে শাড়ি ধরে আছে, ছেলে পাশ থেকে মুগ্ধ চোখে তাকিয়ে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"লাল রঙটা কি বেশি জমকালো হয়ে যাচ্ছে?", tr:"Lal rongta ki beshi jomkalo hoye jachche?", en:"Is this red too flashy?"},
+    {t:"0:04 - 0:08", spk:"ছেলে", bn:"তুমি পরলে সব রঙই মানিয়ে যায়।", tr:"Tumi porle shob rong-i maniye jay.", en:"Every color suits you when you wear it."},
+    {t:"0:08 - 0:11", spk:"মেয়ে", bn:"এইটা তো শুধু মিষ্টি কথা।", tr:"Eita to shudhu mishti kotha.", en:"That's just sweet talk."},
+    {t:"0:11 - 0:15", spk:"ছেলে", bn:"বিয়ের দিন প্রমাণ পাবে, অপেক্ষা করো।", tr:"Biyer din proman pabe, opekkha koro.", en:"You'll see the proof on our wedding day, just wait."}
+  ],
+  song:{bn:"লাল শাড়িতে আজ নতুন করে চেনা / তোমাতেই আঁকা আমার সব স্বপ্ন গাঁথা", tr:"Lal sharite aj notun kore chena / tomatei anka amar shob shopno gatha", en:"In this red sari, I know you all over again / all my dreams are woven into you"}
+},
+{
+  title:"উচ্চতা নিয়ে খুনসুটি",
+  theme:"height teasing",
+  setting:"বারান্দায়, সন্ধ্যার আলোয়, দুজনে পাশাপাশি দাঁড়িয়ে।",
+  manOutfit:"ধূসর টি-শার্ট।",
+  womanOutfit:"হালকা গোলাপি কুর্তি, চুল খোলা।",
+  pose:"মেয়েটি পায়ের আঙুলে ভর দিয়ে ছেলের উচ্চতা মাপার ভঙ্গি করছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"তুমি এত লম্বা কেন হলে বলো তো?", tr:"Tumi eto lomba keno hole bolo to?", en:"Why did you have to be this tall?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"যাতে তোমাকে সহজে জড়িয়ে ধরতে পারি।", tr:"Jate tomake shohoje jariye dhorte pari.", en:"So I can hold you easily."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"আর আমি যে খাটো, সেটা কী দোষ?", tr:"Ar ami je khato, seta ki dosh?", en:"And is it my fault I'm short?"},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"তুমি খাটো বলেই তো তোমাকে কোলে তুলে নিতে ইচ্ছে করে।", tr:"Tumi khato bolei to tomake kole tule nite ichche kore.", en:"It's because you're short that I feel like lifting you up."}
+  ],
+  song:{bn:"উঁচু নিচু মাপ দিয়ে হয় না তো ভালোবাসা / দুজনের মনেই লুকিয়ে থাকে একই আশা", tr:"Uncu nichu map diye hoy na to bhalobasha", en:"Love isn't measured in tall or short / both hearts hide the same quiet hope"}
+},
+{
+  title:"সকালের চা বারান্দায়",
+  theme:"morning tea balcony",
+  setting:"সকালের নরম আলোয় বারান্দায়, হাতে চায়ের কাপ।",
+  manOutfit:"সাদা কুর্তা, চুল একটু এলোমেলো।",
+  womanOutfit:"হালকা হলুদ নাইটি, কাঁধে চাদর।",
+  pose:"রেলিং ধরে পাশাপাশি দাঁড়িয়ে, দুজনের হাতে এক কাপ করে চা।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"চা-টা আজ তুমি বানিয়েছো, তাই না?", tr:"Cha-ta aj tumi baniyecho, tai na?", en:"You made the tea today, didn't you?"},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"হ্যাঁ, তোমার ঘুম ভাঙানোর একটা অজুহাত দরকার ছিল।", tr:"Hae, tomar ghum bhanganor ekta ojuhat dorkar chilo.", en:"Yes, I needed an excuse to wake you up."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"চায়ের স্বাদটা কিন্তু বেশ ভালো হয়েছে।", tr:"Chayer shadta kintu besh bhalo hoyeche.", en:"But the tea actually tastes quite good."},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"তোমার পাশে বসে বানানো, ভালো তো হবেই।", tr:"Tomar pashe boshe banano, bhalo to hobei.", en:"Made sitting beside you, of course it's good."}
+  ],
+  song:{bn:"সকাল হোক তোমার হাতের চায়ের গন্ধে / এই জীবন কাটুক তোমার সাথে ছন্দে", tr:"Shokal hok tomar hater chayer gondhe", en:"Let mornings smell of the tea from your hands / let this life move to your rhythm"}
+},
+{
+  title:"মোটরসাইকেল রাইড",
+  theme:"motorcycle ride",
+  setting:"শহরের রাস্তায় সন্ধ্যায়, বাইকের পাশে দাঁড়িয়ে।",
+  manOutfit:"কালো জ্যাকেট, হাতে হেলমেট।",
+  womanOutfit:"নীল কুর্তি, ওড়না বাতাসে উড়ছে এমন ভঙ্গি।",
+  pose:"মেয়েটি বাইকের পেছনে বসে ছেলের কাঁধে হাত রেখেছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"আজ কোথায় নিয়ে যাচ্ছো আমাকে?", tr:"Aj kothay niye jachcho amake?", en:"Where are you taking me today?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"যেখানে শুধু তুমি আর আমি থাকবো।", tr:"Jekhane shudhu tumi ar ami thakbo.", en:"Somewhere it's only you and me."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"রাস্তা হারিয়ে গেলে?", tr:"Rasta hariye gele?", en:"What if we lose the way?"},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"তোমাকে নিয়ে হারিয়ে যাওয়াটাই তো আসল গন্তব্য।", tr:"Tomake niye hariye jawata-i to ashol gontobbo.", en:"Getting lost with you is the real destination."}
+  ],
+  song:{bn:"হাওয়ার সাথে উড়ুক তোমার চুল / দুজনের পথে থাকুক না কোনো ভুল", tr:"Hawar shathe uruk tomar chul", en:"Let your hair fly with the wind / let there be no wrong turn on our road"}
+},
+{
+  title:"পহেলা বৈশাখ",
+  theme:"pohela boishakh",
+  setting:"রমনার বটমূলের মতো একটা উৎসব প্রাঙ্গণে, লাল-সাদা সাজে।",
+  manOutfit:"সাদা পাঞ্জাবি, লাল উত্তরীয়।",
+  womanOutfit:"লাল পাড়ের সাদা শাড়ি, খোঁপায় ফুল।",
+  pose:"দুজনে হাত ধরাধরি করে উৎসবের ভিড়ে দাঁড়িয়ে আছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"নতুন বছরে তোমার কাছে কী চাই জানো?", tr:"Notun bochore tomar kache ki chai jano?", en:"Do you know what I want from you this new year?"},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"বলো, সব এনে দেবো।", tr:"Bolo, shob ene debo.", en:"Tell me, I'll bring you everything."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"শুধু তোমার এই হাতটা ছেড়ো না কখনো।", tr:"Shudhu tomar ei hatta chero na kokhono.", en:"Just never let go of this hand of yours."},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"এই হাত তো তোমার জন্যই বাঁধা থাকবে চিরকাল।", tr:"Ei hat to tomar jonnoi bandha thakbe chirokal.", en:"This hand will stay bound to you forever."}
+  ],
+  song:{bn:"এসো হে বৈশাখ নতুন প্রেমের ডাকে / দুজনের পথ মিলুক একই বাঁকে", tr:"Esho he boishakh notun premer dake", en:"Come, new year, to the call of new love / let our two paths meet at the same bend"}
+},
+{
+  title:"বর্ষার জানালা",
+  theme:"monsoon window",
+  setting:"ঘরের জানালার পাশে, বাইরে বৃষ্টি, ভেতরে ম্লান হলুদ আলো।",
+  manOutfit:"সাদা টি-শার্ট, জানালায় হাত রাখা।",
+  womanOutfit:"হালকা বেগুনি চাদর গায়ে জড়ানো।",
+  pose:"দুজনে জানালার ধারে বসে বাইরের বৃষ্টি দেখছে, মেয়েটি ছেলের কাঁধে মাথা রাখা।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"এই বৃষ্টি দেখলে কেন জানি মন খারাপ হয়ে যায়।", tr:"Ei bristi dekhle keno jani mon kharap hoye jay.", en:"Watching this rain makes me sad, I don't know why."},
+    {t:"0:04 - 0:08", spk:"ছেলে", bn:"আমি পাশে থাকতে মন খারাপের সময় কোথায়?", tr:"Ami pashe thakte mon kharaper shomoy kothay?", en:"With me beside you, when is there time to be sad?"},
+    {t:"0:08 - 0:11", spk:"মেয়ে", bn:"তাহলে আজ সারাদিন পাশেই থাকো।", tr:"Tahole aj sharadin pashei thako.", en:"Then stay by my side all day today."},
+    {t:"0:11 - 0:15", spk:"ছেলে", bn:"এই বৃষ্টি না থামা পর্যন্ত কোথাও যাচ্ছি না।", tr:"Ei bristi na thama porjonto kothao jachchi na.", en:"I'm not going anywhere until this rain stops."}
+  ],
+  song:{bn:"মেঘলা আকাশ আজ তোমার চোখেই লুকানো / আমার মনটাও তাই তোমাতেই জড়ানো", tr:"Meghla akash aj tomar chokhei lukano", en:"Today's cloudy sky is hidden in your eyes / that's why my heart, too, is wrapped in you"}
+},
+{
+  title:"ছাদে তারা দেখা",
+  theme:"rooftop stargazing",
+  setting:"রাতে ছাদে, চাঁদের আলো, দূরে শহরের আলো।",
+  manOutfit:"হালকা ধূসর হুডি।",
+  womanOutfit:"সাদা কামিজ, চুল খোলা, কাঁধে চাদর।",
+  pose:"দুজনে ছাদের রেলিঙে হেলান দিয়ে আকাশের দিকে তাকিয়ে আছে, মেয়েটির মাথা ছেলের কাঁধে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"আকাশে এত তারা, তবু তোমাকেই বেশি সুন্দর লাগছে।", tr:"Akashe eto tara, tobu tomakei beshi shundor lagche.", en:"So many stars in the sky, yet you look more beautiful."},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তুমি তাকালেই তো আকাশটা আরও উজ্জ্বল হয়ে যায়।", tr:"Tumi takalei to akashta aro ujjol hoye jay.", en:"The sky brightens up whenever you look at it."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"একটা তারা বেছে দাও, ওটা আমার হবে।", tr:"Ekta tara beche dao, ota amar hobe.", en:"Pick out a star, it'll be mine."},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"যেটা সবচেয়ে উজ্জ্বল, সেটাই তোমার নামে রইলো।", tr:"Jeta shobcheye ujjol, setai tomar name roilo.", en:"The brightest one — I'm naming it after you."}
+  ],
+  song:{bn:"তারার মেলায় তোমার নামটা লেখা রইলো আজ / আকাশ জানুক আমার মনের এই কাজ", tr:"Tarar melay tomar namta lekha roilo aj", en:"Your name is written among the stars tonight / let the sky know this work of my heart"}
+},
+{
+  title:"কপালে চুমু, শুভরাত্রি",
+  theme:"forehead kiss goodnight",
+  setting:"ঘরের বিছানার পাশে, নরম টেবিল-ল্যাম্পের আলো।",
+  manOutfit:"সাদা টি-শার্ট।",
+  womanOutfit:"হালকা গোলাপি নাইটি, চুল একপাশে ছড়ানো।",
+  pose:"ছেলেটি মেয়ের কপালে ঠোঁট ছুঁইয়ে ধরে আছে, মেয়েটি চোখ বন্ধ করে হাসছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"আজকের দিনটা তোমার সাথে না কাটালে বৃথা যেতো।", tr:"Ajker dinta tomar shathe na katale britha jeto.", en:"Today would have been wasted without you."},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তাহলে চলো, প্রতিটা দিন একসাথে কাটাই।", tr:"Tahole cholo, protita din eksathe katai.", en:"Then let's spend every day together."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"শুভরাত্রি বলার আগে কিছু বলবে না?", tr:"Shuvoratri bolar age kichu bolbe na?", en:"Won't you say something before goodnight?"},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"ভালোবাসি, এইটুকুই যথেষ্ট, তাই না?", tr:"Bhalobashi, eituku-i jothesto, tai na?", en:"I love you — that's enough, isn't it?"}
+  ],
+  song:{bn:"কপালে ছোঁয়া রাখি রাতের শেষ কথায় / স্বপ্নে দেখা হবে তোমারই ওই মুখটায়", tr:"Kopale chnoya rakhi rater shesh kothay", en:"I leave a touch on your forehead with the night's last word / I'll meet that face of yours in my dreams"}
+},
+{
+  title:"দূরত্বে ভিডিও কল",
+  theme:"video call long distance",
+  setting:"ঘরের ভেতরে, ফোন হাতে বসে বা দাঁড়িয়ে, স্ক্রিনের নীল আভা মুখে।",
+  manOutfit:"ধূসর টি-শার্ট, হাতে ফোন।",
+  womanOutfit:"হালকা নীল কুর্তি, হাতে ফোন, হাসিমুখ।",
+  pose:"দুজনেই আলাদা জায়গায়, ফোন হাতে ধরে যেন একে অপরকে দেখছে এমন ভঙ্গি, ছবিতে দুটি প্যানেল পাশাপাশি।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"এতদিন পর ফোন করার সময় হলো তোমার?", tr:"Etodin por phone korar shomoy holo tomar?", en:"You finally found time to call after so long?"},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তোমার গলা না শুনলে দিনটাই অসম্পূর্ণ লাগে।", tr:"Tomar gola na shunle dinta-i oshomporno lage.", en:"The day feels incomplete without hearing your voice."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"কবে দেখা হবে সামনাসামনি?", tr:"Kobe dekha hobe shamnashamni?", en:"When will we meet face to face?"},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"খুব শিগগিরই, এই দূরত্বটাও একদিন শেষ হবে।", tr:"Khub shiggiroi, ei durottota-o ekdin shesh hobe.", en:"Very soon, this distance will end one day too."}
+  ],
+  song:{bn:"স্ক্রিনের ওপারেও তোমাকে ছুঁতে চাই / দূরত্ব যতই থাক, মনে তুমি সবসময়", tr:"Screener oparew tomake chunte chai", en:"Even across the screen, I want to touch you / however far, you stay in my heart always"}
+},
+{
+  title:"পুরনো প্রেমপত্র",
+  theme:"old love letter",
+  setting:"ঘরের ডেস্কের পাশে, হাতে হলুদ হয়ে যাওয়া চিঠি।",
+  manOutfit:"সাদা কুর্তা।",
+  womanOutfit:"হালকা সবুজ শাড়ি।",
+  pose:"মেয়েটি চিঠি পড়ছে, ছেলে পেছন থেকে হালকা লজ্জা পাওয়া ভঙ্গিতে দাঁড়িয়ে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"এই চিঠিটা তুমি এখনও রেখে দিয়েছো?", tr:"Ei chithita tumi ekhono rekhe diyecho?", en:"You've kept this letter all this time?"},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তোমার প্রথম হাতের লেখা, ফেলে দিই কী করে?", tr:"Tomar prothom hater lekha, fele dii ki kore?", en:"Your first handwriting — how could I throw it away?"},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"তখন কত লজ্জা পেয়ে লিখেছিলাম মনে আছে?", tr:"Tokhon koto lojja peye likhechilam mone ache?", en:"Do you remember how shy I was writing it?"},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"সেই লজ্জা মাখা কথাগুলোই তো আমাকে তোমার করেছে।", tr:"Sei lojja makha kothaguloi to amake tomar koreche.", en:"Those shy words are exactly what made me yours."}
+  ],
+  song:{bn:"পুরনো চিঠির পাতায় আজও তোমার ঘ্রাণ / সময় গড়ালেও একই রয়ে গেছে টান", tr:"Purono chithir patay ajo tomar ghran", en:"Your scent still lingers on the old letter's page / time has passed, but the pull stays the same"}
+},
+{
+  title:"বাগানে হাঁটা",
+  theme:"garden walk",
+  setting:"সবুজ বাগানে, ফুলের গাছের পাশ দিয়ে হাঁটার পথ।",
+  manOutfit:"হালকা বেইজ শার্ট।",
+  womanOutfit:"সাদা ফ্লোরাল কুর্তি।",
+  pose:"দুজনে হাত ধরে বাগানের পথে হাঁটছে, মেয়েটি একটা ফুল তুলে দেখাচ্ছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"দেখো তো, এই ফুলটা কেমন লাগছে?", tr:"Dekho to, ei phulta kemon lagche?", en:"Look, how does this flower look?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"ফুলের চেয়ে তোমার হাসিটাই বেশি সুন্দর।", tr:"Phuler cheye tomar hashita-i beshi shundor.", en:"Your smile is more beautiful than any flower."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"সব জায়গাতেই তুমি একই কথা বলো।", tr:"Shob jaygatei tumi eki kotha bolo.", en:"You say the same thing everywhere."},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"কারণ প্রতিবার তোমাকে দেখে সত্যিটাই মনে হয়।", tr:"Karon protibar tomake dekhe shottita-i mone hoy.", en:"Because every time I see you, it feels true again."}
+  ],
+  song:{bn:"বাগানের প্রতিটা ফুল যেন তোমারই ছায়া / সুবাসেও মিশে আছে তোমারই মায়া", tr:"Baganer protita phul jeno tomari chaya", en:"Every flower in the garden feels like your shadow / your charm mixed even in the fragrance"}
+},
+{
+  title:"সন্ধ্যার বাজার",
+  theme:"evening market",
+  setting:"রঙিন লাইটে সাজানো সন্ধ্যার বাজার, দোকানের পাশে দাঁড়িয়ে।",
+  manOutfit:"হালকা চেক শার্ট, হাতে থলে।",
+  womanOutfit:"হলুদ কুর্তি।",
+  pose:"মেয়েটি একটা জিনিস দেখছে, ছেলে পাশ থেকে থলে ধরে দাঁড়িয়ে আছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"এই থলেটা আজ সারাদিন তুমিই বইলে।", tr:"Ei tholeta aj sharadin tumi-i boile.", en:"You've carried this bag all day today."},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তোমার হাত খালি রাখতে ইচ্ছে করে না আমার।", tr:"Tomar hat khali rakhte ichche kore na amar.", en:"I don't like leaving your hands empty."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"তাহলে আমার হাতটাও ধরে রাখো।", tr:"Tahole amar hattao dhore rakho.", en:"Then hold my hand too."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"সেটা তো সবসময়ের জন্যই ধরে আছি।", tr:"Seta to shobshomoyer jonnoi dhore achi.", en:"I've been holding that always, anyway."}
+  ],
+  song:{bn:"বাজারের ভিড়েও তোমাকেই খুঁজে পাই / এই শহরে তুমিই আমার একমাত্র ঠিকানা", tr:"Bajarer bhirew tomakei khunje pai", en:"Even in the market's crowd, I find only you / in this whole city, you're my only address"}
+},
+{
+  title:"পুরনো দম্পতির স্মৃতিচারণ",
+  theme:"old couple nostalgia bench",
+  setting:"পার্কের বেঞ্চে বসে, বিকেলের নরম আলো।",
+  manOutfit:"সাদা পাঞ্জাবি, চশমা।",
+  womanOutfit:"হালকা রঙের শাড়ি, চুলে রুপালি ছোঁয়া।",
+  pose:"দুজনে বেঞ্চে পাশাপাশি বসে হাত ধরে আছে, সামনে খেলা করা বাচ্চাদের দেখছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"মনে আছে, এই বেঞ্চেই প্রথম বসেছিলাম আমরা?", tr:"Mone ache, ei benchei prothom boshechilam amra?", en:"Remember, this is the bench we first sat on?"},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"কী করে ভুলি, সেদিনই তোমাকে মনে ধরেছিল।", tr:"Ki kore bhuli, shedin-i tomake mone dhorechilo.", en:"How could I forget, that's the day I fell for you."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"এতগুলো বছর কীভাবে কেটে গেলো বলো তো।", tr:"Etogulo bochor kibhabe kete gelo bolo to.", en:"How did all these years pass by, tell me."},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"তোমার হাত ধরে থাকলে সময় টেরই পাওয়া যায় না।", tr:"Tomar hat dhore thakle shomoy teri paowa jay na.", en:"Holding your hand, you never even notice time pass."}
+  ],
+  song:{bn:"এতটা বছর পরেও একই রয়ে গেছে টান / বুড়ো বয়সেও তুমিই আমার প্রথম গান", tr:"Etota bochor porew eki roye geche tan", en:"Even after all these years, the pull remains the same / even in old age, you're still my first song"}
+},
+{
+  title:"ঝগড়ার পর মিটমাট",
+  theme:"first fight makeup",
+  setting:"ঘরের ভেতরে, সোফার পাশে দাঁড়িয়ে।",
+  manOutfit:"কালো টি-শার্ট।",
+  womanOutfit:"ধূসর কুর্তি, মুখ ফিরিয়ে রাখা ভঙ্গি।",
+  pose:"মেয়েটি মুখ ঘুরিয়ে দাঁড়িয়ে, ছেলে পেছন থেকে হাত বাড়িয়ে ধরার চেষ্টা করছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"ছেলে", bn:"এখনও রাগ কমেনি তোমার?", tr:"Ekhono rag komeni tomar?", en:"Are you still angry?"},
+    {t:"0:03 - 0:06", spk:"মেয়ে", bn:"তুমি ভুল স্বীকার না করলে কমবে কেন?", tr:"Tumi bhul shikar na korle kombe keno?", en:"Why would it lessen if you don't admit your mistake?"},
+    {t:"0:06 - 0:09", spk:"ছেলে", bn:"ঠিক আছে, ভুল আমারই ছিল, মাফ করে দাও।", tr:"Thik ache, bhul amari chilo, maf kore dao.", en:"Alright, it was my mistake, forgive me."},
+    {t:"0:09 - 0:13", spk:"মেয়ে", bn:"পরের বার এমন হলে কিন্তু কথা বলবো না।", tr:"Porer bar emon hole kintu kotha bolbo na.", en:"But if it happens again, I won't speak to you."}
+  ],
+  song:{bn:"রাগ অভিমান শেষে থাকুক না ভালোবাসা / দুজনের মাঝে মিটে যাক সব ভাষা", tr:"Rag obhiman sheshe thakuk na bhalobasha", en:"After the anger and sulking, let love remain / let every unspoken word between us settle"}
+},
+{
+  title:"জন্মদিনের চমক",
+  theme:"surprise birthday gift",
+  setting:"ঘরের ভেতরে, বেলুন ও ছোট আলোর সাজে ঘেরা।",
+  manOutfit:"সাদা শার্ট, হাতে উপহারের বাক্স।",
+  womanOutfit:"লাল কুর্তি, চোখ বন্ধ করা ভঙ্গি।",
+  pose:"ছেলে চোখ বাঁধা মেয়ের সামনে উপহার ধরে দাঁড়িয়ে, মেয়েটি চোখ খুলে অবাক হওয়ার ভঙ্গি।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"চোখ খুলে কী দেখবো এখন?", tr:"Chokh khule ki dekhbo ekhon?", en:"What am I going to see when I open my eyes?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তোমার জন্য সাজানো একটা ছোট্ট আশ্চর্য।", tr:"Tomar jonno shajano ekta chotto ashcharjo.", en:"A small surprise I arranged just for you."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"এত কিছু করার কী দরকার ছিল?", tr:"Eto kichu korar ki dorkar chilo?", en:"Was all this really necessary?"},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"তোমার হাসি দেখার জন্য এটুকু তো করতেই পারি।", tr:"Tomar hashi dekhar jonno etuku to korte-i pari.", en:"I can do at least this much to see you smile."}
+  ],
+  song:{bn:"জন্মদিনের মোমবাতিতে তোমারই মুখ ভাসে / এই এক জীবন কাটুক তোমার পাশে", tr:"Jonmodiner mombatite tomari mukh bhashe", en:"Your face glows in the birthday candlelight / let this one life pass by your side"}
+},
+{
+  title:"বিয়ের নাচের রিহার্সাল",
+  theme:"wedding dance rehearsal",
+  setting:"একটা খোলা হলঘরে, আয়নার সামনে।",
+  manOutfit:"হালকা নীল কুর্তা।",
+  womanOutfit:"সবুজ লেহেঙ্গা।",
+  pose:"দুজনে নাচের ভঙ্গিতে হাত ধরে দাঁড়িয়ে, আয়নায় প্রতিবিম্ব দেখা যাচ্ছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"তুমি তো একদম নাচতেই পারো না!", tr:"Tumi to ekdom nachtei paro na!", en:"You can't dance at all!"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তোমার হাত ধরে থাকলে পা তো এমনিই চলে।", tr:"Tomar hat dhore thakle pa to emni-i chole.", en:"With your hand in mine, my feet move on their own."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"বিয়ের দিন কিন্তু সবাই দেখবে এই নাচ।", tr:"Biyer din kintu shobai dekhbe ei nach.", en:"Everyone will watch this dance on our wedding day."},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"তাহলে চলো, আরেকবার প্র্যাকটিস করি একসাথে।", tr:"Tahole cholo, arekbar practice kori eksathe.", en:"Then let's practice once more together."}
+  ],
+  song:{bn:"বেসুরো পায়েও থাক না এই মিলনের গান / তোমার সাথে নাচলেই ভরে যায় প্রাণ", tr:"Beshuro payew thak na ei miloner gan", en:"Even with clumsy steps, let this union's song play / dancing with you fills my heart"}
+},
+{
+  title:"ছবির অ্যালবাম দেখা",
+  theme:"photo album memories",
+  setting:"সোফায় বসে, হাতে পুরনো ছবির অ্যালবাম।",
+  manOutfit:"সাদা টি-শার্ট।",
+  womanOutfit:"হালকা বেগুনি কুর্তি।",
+  pose:"দুজনে পাশাপাশি বসে অ্যালবাম দেখছে, মেয়েটি একটা ছবি আঙুল দিয়ে দেখাচ্ছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"এই ছবিতে তোমাকে কী বোকা বোকা লাগছে!", tr:"Ei chobite tomake ki boka boka lagche!", en:"You look so silly in this photo!"},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তখন তো তোমাকে দেখেই ঘাবড়ে গিয়েছিলাম।", tr:"Tokhon to tomake dekhei ghabre giyechilam.", en:"I was so nervous just seeing you back then."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"এখন তো একদম অন্য মানুষ হয়ে গেছো।", tr:"Ekhon to ekdom onno manush hoye gecho.", en:"Now you've become a completely different person."},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"তোমাকে ভালোবেসেই তো এতটা বদলে গেলাম।", tr:"Tomake bhalobeshei to etota bodle gelam.", en:"Loving you is exactly what changed me this much."}
+  ],
+  song:{bn:"পুরনো ছবির পাতায় জমে আছে কত গল্প / প্রতিটা মুহূর্তে তুমিই আমার স্বল্প", tr:"Purono chobir patay jome ache koto golpo", en:"So many stories are gathered on this old photo page / in every moment, you're my brief eternity"}
+},
+{
+  title:"শৈশবের বন্ধু, এখন প্রেমিক",
+  theme:"childhood friends turned lovers",
+  setting:"স্কুলের মাঠের মতো একটা খোলা জায়গায়, বিকেলের আলো।",
+  manOutfit:"হালকা হলুদ শার্ট।",
+  womanOutfit:"সাদা কুর্তি, বেণী করা চুল।",
+  pose:"দুজনে পাশাপাশি হাঁটছে, মেয়েটি হালকা লজ্জা পাওয়া ভঙ্গিতে চোখ নামিয়ে হাসছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"ছোটবেলায় তো তুই আমাকে দেখতেই পারতি না।", tr:"Chotobelay to tui amake dekhtei parti na.", en:"You couldn't even stand me as kids."},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তখন বুঝিনি তুই একদিন আমার সব হয়ে যাবি।", tr:"Tokhon bujhini tui ekdin amar shob hoye jabi.", en:"I didn't realize back then you'd become my everything one day."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"কবে থেকে এত মিষ্টি কথা বলতে শিখলি?", tr:"Kobe theke eto mishti kotha bolte shiklee?", en:"Since when did you learn to say such sweet things?"},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"তোকে ভালোবেসেই শিখেছি, আর কিছু না।", tr:"Toke bhalobeshei shikhechi, ar kichu na.", en:"I learned it loving you, nothing else."}
+  ],
+  song:{bn:"শৈশবের সেই বন্ধুত্ব আজ হলো ভালোবাসা / চেনা মুখেই লুকিয়ে ছিল নতুন এক আশা", tr:"Shoishober shei bondhutto aj holo bhalobasha", en:"That childhood friendship has turned to love today / a new hope was hidden in that familiar face"}
+},
+{
+  title:"পারিবারিক বিয়ের প্রথম দেখা",
+  theme:"arranged marriage first meeting",
+  setting:"বাসার ড্রইংরুমে, সোফায় মুখোমুখি বসে।",
+  manOutfit:"হালকা নীল পাঞ্জাবি।",
+  womanOutfit:"গোলাপি শাড়ি, হাতে চায়ের কাপ।",
+  pose:"দুজনে একটু দূরত্ব রেখে বসে আছে, লাজুক দৃষ্টিতে একে অপরের দিকে তাকিয়ে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"ছেলে", bn:"আপনার নাকি ছবি আঁকার শখ আছে?", tr:"Apnar naki chobi akar shokh ache?", en:"I heard you have a hobby of painting?"},
+    {t:"0:04 - 0:07", spk:"মেয়ে", bn:"হ্যাঁ, তবে আজকাল সময় হয়ে ওঠে না।", tr:"Hae, tobe ajkal shomoy hoye othe na.", en:"Yes, but I don't find time these days."},
+    {t:"0:07 - 0:10", spk:"ছেলে", bn:"সময় হলে আমাকে একটা ছবি এঁকে দেবেন?", tr:"Shomoy hole amake ekta chobi enke deben?", en:"Will you draw me a picture when you have time?"},
+    {t:"0:10 - 0:14", spk:"মেয়ে", bn:"সেটা নির্ভর করছে, আপনি কতটা ভালো মডেল।", tr:"Seta nirbhor korche, apni kotota bhalo model.", en:"That depends on how good a model you turn out to be."}
+  ],
+  song:{bn:"প্রথম দেখাতেই লাজুক দুটো মন / চেনা পথেই খুঁজে পেলো নতুন এক ক্ষণ", tr:"Prothom dekhatei lajuk duto mon", en:"Two shy hearts at first sight / found a new moment on a familiar path"}
+},
+{
+  title:"রাতের ট্রেন যাত্রা",
+  theme:"night train journey",
+  setting:"ট্রেনের জানালার পাশে বসে, বাইরে রাতের আলো ছুটে যাচ্ছে।",
+  manOutfit:"ধূসর সোয়েটার।",
+  womanOutfit:"হালকা বাদামি চাদর জড়ানো।",
+  pose:"মেয়েটি ছেলের কাঁধে মাথা রেখে ঘুমানোর ভঙ্গিতে বসে আছে, জানালার বাইরে আলো।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"এই রাতের যাত্রাটা যেন শেষ না হয়।", tr:"Ei rater jattrata jeno shesh na hoy.", en:"I wish this night journey never ended."},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তোমার পাশে থাকলে যাত্রাটা তো ছোটই মনে হয়।", tr:"Tomar pashe thakle jattrata to choto-i mone hoy.", en:"With you beside me, the journey feels short anyway."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"পৌঁছে গেলে তো আবার সবার মাঝে হারিয়ে যাবো।", tr:"Pounche gele to abar shobar majhe hariye jabo.", en:"Once we arrive, I'll get lost among everyone again."},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"যেখানেই থাকো, আমার চোখ শুধু তোমাকেই খুঁজবে।", tr:"Jekhanei thako, amar chokh shudhu tomakei khujbe.", en:"Wherever you are, my eyes will only search for you."}
+  ],
+  song:{bn:"চাকার শব্দে মিশে আছে দুটি মনের কথা / রাতের আঁধারেও পথ চেনায় ভালোবাসা", tr:"Chakar shobde mishe ache duti moner kotha", en:"Two hearts' words mix into the wheels' rhythm / even in night's dark, love shows the way"}
+},
+{
+  title:"কফি শপে আড্ডা",
+  theme:"coffee shop chat",
+  setting:"একটা ছোট কফি শপে, জানালার পাশের টেবিলে।",
+  manOutfit:"কালো সোয়েটার।",
+  womanOutfit:"সাদা টার্টলনেক, হাতে কফির কাপ।",
+  pose:"দুজনে টেবিলে মুখোমুখি বসে হাত ধরে আছে, সামনে দুটো কফির কাপ।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"তুমি সবসময় কালো কফিই খাও কেন?", tr:"Tumi shobshomoy kalo coffee-i khao keno?", en:"Why do you always drink black coffee?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তেতো জিনিসও তোমার সাথে মিষ্টি লাগে।", tr:"Teto jinishou tomar shathe mishti lage.", en:"Even bitter things taste sweet with you."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"এইসব কথা কোথায় শেখো তুমি?", tr:"Eishob kotha kothay shekho tumi?", en:"Where do you learn to say such things?"},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"তোমাকে দেখলেই মনে এসব কথা এমনি জাগে।", tr:"Tomake dekhlei mone eshob kotha emni jage.", en:"These words just come to mind whenever I see you."}
+  ],
+  song:{bn:"কফির ধোঁয়ার সাথে মিশে যায় তোমার হাসি / এই ছোট্ট বিকেলটাই যেন সবচেয়ে বেশি", tr:"Coffee-r dhnoyar shathe mishe jay tomar hashi", en:"Your smile blends with the coffee's steam / this small afternoon feels like the most of all"}
+},
+{
+  title:"একসাথে বই পড়া",
+  theme:"reading together at home",
+  setting:"ঘরের বিছানায়, দুপাশে বালিশ হেলান দিয়ে বসা।",
+  manOutfit:"সাদা টি-শার্ট, হাতে বই।",
+  womanOutfit:"হালকা ধূসর নাইটি।",
+  pose:"মেয়েটি ছেলের বুকে হেলান দিয়ে বই পড়ছে, ছেলে তার চুলে আঙুল বুলাচ্ছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"এই গল্পটা পড়তে পড়তে ঘুম চলে আসছে।", tr:"Ei golpota porte porte ghum chole ashche.", en:"Reading this story is making me sleepy."},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তাহলে আজ আর গল্প না, এখানেই থামি।", tr:"Tahole aj ar golpo na, ekhanei thami.", en:"Then let's stop the story here for today."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"তুমি তো বইয়ের চেয়েও ভালো বালিশ।", tr:"Tumi to boyer cheyeo bhalo balish.", en:"You're a better pillow than any book."},
+    {t:"0:10 - 0:13", spk:"ছেলে", bn:"তাহলে আজ সারারাত এভাবেই বিশ্রাম নাও।", tr:"Tahole aj sharat evabei bishram nao.", en:"Then rest just like this all night today."}
+  ],
+  song:{bn:"বইয়ের পাতায় নয়, তোমার বুকেই ঠিকানা / নিশ্চিন্তে ঘুমাক আজ আমার এই মনটা", tr:"Boyer patay noy, tomar bukei thikana", en:"Not on a book's page, but in your chest is my address / let my heart rest peacefully tonight"}
+},
+{
+  title:"পোর্ট্রেট আঁকা",
+  theme:"painting a portrait",
+  setting:"ঘরের এক কোণে, ইজেলের সামনে, রঙের প্যালেট হাতে।",
+  manOutfit:"রঙ লাগা সাদা শার্ট, হাতে তুলি।",
+  womanOutfit:"লাল ওড়না গায়ে, বসার ভঙ্গিতে মডেল হয়ে আছে।",
+  pose:"ছেলে ইজেলের সামনে দাঁড়িয়ে ছবি আঁকছে, মেয়েটি চেয়ারে বসে হাসি চেপে রেখেছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"এত সময় ধরে কী আঁকছো আমাকে?", tr:"Eto shomoy dhore ki akcho amake?", en:"What are you painting of me for this long?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তোমার হাসিটা ঠিকঠাক ফুটিয়ে তুলতে চাইছি।", tr:"Tomar hashita thikthak futiye tulte chaichi.", en:"I'm trying to capture your smile just right."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"ছবিতে কি সত্যিই এত সুন্দর লাগবে আমাকে?", tr:"Chobite ki shottiy eto shundor lagbe amake?", en:"Will I really look this beautiful in the painting?"},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"তুমি যেমন, ছবিও ঠিক তেমনই সুন্দর হবে।", tr:"Tumi jemon, chobio thik temoni shundor hobe.", en:"As beautiful as you are, the painting will be too."}
+  ],
+  song:{bn:"রঙে রঙে আঁকি তোমার মুখের ছবি / মনের ক্যানভাসে তুমিই আসল কবি", tr:"Ronge ronge aki tomar mukher chobi", en:"With every color I paint your face / in my heart's canvas, you're the true poet"}
+},
+{
+  title:"একসাথে গান গাওয়া",
+  theme:"singing duet",
+  setting:"ঘরের ভেতরে, হাতে একটা গিটার।",
+  manOutfit:"সাদা কুর্তা, কাঁধে গিটার।",
+  womanOutfit:"হলুদ কুর্তি।",
+  pose:"ছেলে গিটার বাজাচ্ছে, মেয়েটি পাশে বসে গান গাওয়ার ভঙ্গিতে হাসছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"ছেলে", bn:"তোমার জন্য একটা গান বেঁধেছি।", tr:"Tomar jonno ekta gan bendhechi.", en:"I've composed a song for you."},
+    {t:"0:03 - 0:06", spk:"মেয়ে", bn:"শুনি তো, কেমন গান লিখেছো।", tr:"Shuni to, kemon gan likhecho.", en:"Let's hear it, what kind of song did you write."},
+    {t:"0:06 - 0:09", spk:"ছেলে", bn:"প্রতিটা লাইনেই শুধু তোমার নাম আছে।", tr:"Protita line-ei shudhu tomar nam ache.", en:"Every line has only your name in it."},
+    {t:"0:09 - 0:12", spk:"মেয়ে", bn:"তাহলে এই গানটাই আমাদের গান হয়ে থাক।", tr:"Tahole ei ganta-i amader gan hoye thak.", en:"Then let this song be our song forever."}
+  ],
+  song:{bn:"সুরে সুরে বাঁধা থাক দুটি মনের কথা / এই গানই হোক আমাদের ভালোবাসার ভাষা", tr:"Shure shure bandha thak duti moner kotha", en:"Let two hearts' words stay bound in melody / let this song be our love's language"}
+},
+{
+  title:"নদীর ধারে নৌকা ভ্রমণ",
+  theme:"riverside boat ride",
+  setting:"একটা ছোট নৌকায়, নদীর মাঝে, বিকেলের আলো জলে প্রতিফলিত।",
+  manOutfit:"সাদা পাঞ্জাবি, হাতে বৈঠা।",
+  womanOutfit:"হালকা নীল শাড়ি।",
+  pose:"দুজনে নৌকায় মুখোমুখি বসে, মেয়েটি জলে হাত ছোঁয়াচ্ছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"নদীর এই বাতাসটা কী ঠান্ডা, তাই না?", tr:"Nodir ei batasta ki thanda, tai na?", en:"This river breeze is so cool, isn't it?"},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তোমার পাশে বসলে বাতাসও প্রেমে পড়ে যায়।", tr:"Tomar pashe boshle batasw premey pore jay.", en:"Even the breeze falls in love sitting beside you."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"নৌকাটা যদি এখানেই থেমে যেতো।", tr:"Noukata jodi ekhanei theme jeto.", en:"If only this boat could stop right here."},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"সময় থামুক বা না থামুক, তুমি আমার পাশেই থেকো।", tr:"Shomoy thamuk ba na thamuk, tumi amar pashei theko.", en:"Whether time stops or not, just stay by my side."}
+  ],
+  song:{bn:"নদীর স্রোতের মতোই বয়ে যাক এই মন / দুজনের নৌকা চলুক একই ছন্দ", tr:"Nodir sroter motoi boye jak ei mon", en:"Let this heart flow like the river's current / let our boat move to the same rhythm"}
+},
+{
+  title:"রাস্তার চায়ের দোকান",
+  theme:"tea stall roadside",
+  setting:"রাস্তার পাশে একটা ছোট চায়ের দোকান, সন্ধ্যার আলো।",
+  manOutfit:"ধূসর শার্ট, হাতে মাটির কাপ।",
+  womanOutfit:"সবুজ কুর্তি, হাতে চায়ের কাপ।",
+  pose:"দুজনে দোকানের বেঞ্চে পাশাপাশি বসে চা খাচ্ছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"এই রাস্তার চা কেন এত ভালো লাগে বলো তো?", tr:"Ei rastar cha keno eto bhalo lage bolo to?", en:"Why does this roadside tea taste so good, tell me?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"চায়ের স্বাদে না, তোমার সঙ্গেই আসল মজা।", tr:"Chayer shade na, tomar shongei ashol moja.", en:"It's not the tea's taste, the real joy is your company."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"রোজ এভাবে এসে বসতে পারবো তো?", tr:"Roj evabe eshe boshte parbo to?", en:"Will we be able to come and sit like this every day?"},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"তুমি চাইলে এটাই হোক আমাদের রোজকার অভ্যাস।", tr:"Tumi chaile etai hok amader rojkar obbhash.", en:"If you want, let this be our everyday habit."}
+  ],
+  song:{bn:"মাটির কাপে চুমুক দিয়ে খুঁজে পাই তোমার ছোঁয়া / সাদামাটা এই জীবনটাই তোমাতে মোড়া", tr:"Matir kape chumuk diye khunje pai tomar chnoya", en:"With every sip from the clay cup, I find your touch / this simple life is wrapped in you"}
+},
+{
+  title:"বিয়ের দিনের নার্ভাসনেস",
+  theme:"wedding day nerves",
+  setting:"বিয়ের সাজে ঘরের ভেতরে, আয়নার সামনে।",
+  manOutfit:"সাদা শেরওয়ানি।",
+  womanOutfit:"লাল বিয়ের শাড়ি, গহনা পরা।",
+  pose:"মেয়েটি আয়নার সামনে দাঁড়িয়ে, ছেলে পাশে এসে হাত ধরছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"আজ কেন জানি খুব ভয় ভয় লাগছে।", tr:"Aj keno jani khub bhoy bhoy lagche.", en:"I don't know why, but I feel so nervous today."},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"ভয়ের কিছু নেই, আমি তো পাশেই থাকবো সবসময়।", tr:"Bhoyer kichu nei, ami to pashei thakbo shobshomoy.", en:"Nothing to fear, I'll always be right beside you."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"কথা দাও, কখনও একা ফেলে যাবে না।", tr:"Kotha dao, kokhono eka fele jabe na.", en:"Promise me you'll never leave me alone."},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"আজ থেকে তোমার হাত আমার হাতেই বাঁধা রইলো।", tr:"Aj theke tomar hat amar hatei bandha roilo.", en:"From today, your hand stays bound to mine."}
+  ],
+  song:{bn:"লাল বেনারসিতে আজ নতুন এক জীবন শুরু / দুজনের পথ চলা হোক একসাথেই পুরো", tr:"Lal benarasite aj notun ek jibon shuru", en:"A new life begins today in red benarasi / let our journey be walked whole, together"}
+},
+{
+  title:"মধুচন্দ্রিমার পরিকল্পনা",
+  theme:"honeymoon planning",
+  setting:"ঘরের ভেতরে, ম্যাপ ও ফটো ছড়ানো টেবিলের সামনে।",
+  manOutfit:"হালকা নীল টি-শার্ট।",
+  womanOutfit:"সাদা কুর্তি, হাতে ম্যাপ।",
+  pose:"দুজনে টেবিলের সামনে মাথা ঠেকিয়ে ম্যাপ দেখছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"পাহাড় নাকি সমুদ্র, কোথায় যাবো আমরা?", tr:"Pahar naki shomudro, kothay jabo amra?", en:"Mountains or the sea, where should we go?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তুমি যেখানে, সেটাই আমার প্রিয় জায়গা।", tr:"Tumi jekhane, setai amar priyo jayga.", en:"Wherever you are, that's my favorite place."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"তাহলে দুটোই ঘুরে দেখি চলো।", tr:"Tahole dutoi ghure dekhi cholo.", en:"Then let's go see both."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"তোমার সাথে গেলে যেকোনো জায়গাই স্বর্গ।", tr:"Tomar shathe gele jekono jayga-i shorgo.", en:"With you, any place turns into heaven."}
+  ],
+  song:{bn:"নতুন পথের সন্ধানে দুজনে বেরিয়ে পড়ি / স্বপ্নের ঠিকানাতেও তোমাকেই ধরি", tr:"Notun pother shondhane dujone beriye pori", en:"We set out together in search of a new path / even in the address of dreams, I hold onto you"}
+},
+{
+  title:"বিবাহবার্ষিকীর ডিনার",
+  theme:"anniversary dinner",
+  setting:"ঘরের ভেতরে, মোমবাতি জ্বালানো টেবিলে ডিনার সাজানো।",
+  manOutfit:"সাদা শার্ট, হাতে ফুলের তোড়া।",
+  womanOutfit:"কালো শাড়ি।",
+  pose:"দুজনে টেবিলের দুপাশে বসে, মোমবাতির আলোয় হাত ধরে আছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"এতগুলো বছর পরও এভাবে সাজিয়ে রাখো কেন?", tr:"Etogulo bochor porw evabe shajiye rakho keno?", en:"Why do you still arrange things like this after all these years?"},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তোমাকে প্রতিবার নতুন করে প্রেমে ফেলতে চাই বলে।", tr:"Tomake protibar notun kore preme felte chai bole.", en:"Because I want to make you fall in love all over again."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"তাহলে তো প্রতিবারই সফল হও তুমি।", tr:"Tahole to protibar-i shofol hoo tumi.", en:"Then you succeed every single time."},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"তোমার হ্যাঁ শোনার জন্যই তো এত আয়োজন।", tr:"Tomar hae shonar jonnoi to eto ayojon.", en:"All this arrangement is just to hear your yes."}
+  ],
+  song:{bn:"বছর ঘুরে আসুক তবু একই থাকুক টান / মোমবাতির আলোয় আজও তোমাতেই প্রাণ", tr:"Bochor ghure ashuk tobu eki thakuk tan", en:"Let the years pass, but let the pull stay the same / even in candlelight, my life is in you"}
+},
+{
+  title:"বিয়ের কার্ড লেখা",
+  theme:"wedding card writing",
+  setting:"ঘরের টেবিলে, চারপাশে বিয়ের কার্ড ছড়ানো।",
+  manOutfit:"হালকা হলুদ পাঞ্জাবি।",
+  womanOutfit:"সবুজ কুর্তি।",
+  pose:"দুজনে টেবিলের সামনে বসে কার্ডে নাম লিখছে, একে অপরের দিকে হাসিমুখে তাকিয়ে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"কতগুলো কার্ড লেখা এখনও বাকি আছে?", tr:"Kotogulo card lekha ekhono baki ache?", en:"How many cards are still left to write?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"অনেকগুলো, কিন্তু তোমার সাথে করলে ক্লান্তি লাগে না।", tr:"Onekgulo, kintu tomar shathe korle klanti lage na.", en:"Many, but doing it with you doesn't feel tiring."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"আমাদের নাম দুটো পাশাপাশি কেমন লাগছে দেখো।", tr:"Amader nam duto pashapashi kemon lagche dekho.", en:"Look how our two names look side by side."},
+    {t:"0:09 - 0:13", spk:"ছেলে", bn:"এই নাম দুটো তো এখন থেকে চিরকাল পাশাপাশিই থাকবে।", tr:"Ei nam duto to ekhon theke chirokal pashapashi-i thakbe.", en:"These two names will stay side by side forever from now."}
+  ],
+  song:{bn:"কার্ডের পাতায় লেখা থাক দুজনের নাম / নতুন জীবনের শুরু হোক এই বিকেলবেলায় প্রণাম", tr:"Carder patay lekha thak dujoner nam", en:"Let both our names be written on the card's page / let a new life begin with this evening's greeting"}
+},
+{
+  title:"হলুদ ও মেহেদির রাত",
+  theme:"henna night",
+  setting:"হলুদ ও লাল আলোয় সাজানো উঠান, ফুলের সাজ।",
+  manOutfit:"হলুদ পাঞ্জাবি।",
+  womanOutfit:"হলুদ শাড়ি, হাতে মেহেদি লাগানো।",
+  pose:"মেয়েটি হাত মেলে ধরে আছে, ছেলে পাশে বসে মেহেদির নকশা দেখছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"ছেলে", bn:"হাতে আমার নামটাও লিখেছো নাকি?", tr:"Hate amar namta-o likhecho naki?", en:"Did you write my name on your hand too?"},
+    {t:"0:03 - 0:06", spk:"মেয়ে", bn:"খুঁজে বের করতে হবে, কোথায় লুকিয়ে আছে।", tr:"Khunje ber korte hobe, kothay lukiye ache.", en:"You'll have to find where it's hidden."},
+    {t:"0:06 - 0:09", spk:"ছেলে", bn:"তোমার পুরো হাতটাই তো আমার নামে ভরা মনে হচ্ছে।", tr:"Tomar puro hatta-i to amar name bhora mone hochche.", en:"Your whole hand feels filled with my name."},
+    {t:"0:09 - 0:12", spk:"মেয়ে", bn:"মেহেদির রঙ যত গাঢ় হবে, ভালোবাসাও তত গাঢ় হবে।", tr:"Mehedir rong joto gaR hobe, bhalobashao toto gaR hobe.", en:"The deeper the henna, the deeper the love, they say."}
+  ],
+  song:{bn:"মেহেদির নকশায় লেখা তোমারই নাম / হলুদের এই সন্ধ্যায় শুরু হোক নতুন এক ঘরানা", tr:"Mehedir nokshay lekha tomari nam", en:"Your name written in the henna's design / let this yellow-hued evening begin a new chapter"}
+},
+{
+  title:"শাড়ি পরতে সাহায্য",
+  theme:"sari draping help",
+  setting:"ঘরের ভেতরে, আয়নার সামনে।",
+  manOutfit:"সাদা টি-শার্ট।",
+  womanOutfit:"নীল শাড়ি, কুঁচি ঠিক করার ভঙ্গি।",
+  pose:"ছেলে মেয়ের শাড়ির কুঁচি ঠিক করে দিচ্ছে, মেয়েটি আয়নায় নিজেকে দেখছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"কুঁচিগুলো ঠিক হচ্ছে না কিছুতেই।", tr:"Kunchigulo thik hochche na kichutei.", en:"The pleats just won't come out right."},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"দাঁড়াও, আমিই ঠিক করে দিচ্ছি।", tr:"Danrao, ami-i thik kore dichchi.", en:"Wait, let me fix it for you."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"তুমি কবে থেকে এসব শিখলে?", tr:"Tumi kobe theke eshob shikhle?", en:"Since when did you learn all this?"},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"তোমাকে সুন্দর দেখতে হলে যা করতে হয়, তাই শিখে নিয়েছি।", tr:"Tomake shundor dekhte hole ja korte hoy, tai shikhe niyechi.", en:"Whatever it takes to make you look beautiful, I've learned it."}
+  ],
+  song:{bn:"শাড়ির আঁচলে জড়িয়ে থাকুক দুজনের গল্প / এই মুহূর্তটাই আমার সবচেয়ে বেশি অল্প", tr:"Sharir anchole jariye thakuk dujoner golpo", en:"Let our story stay wrapped in this sari's edge / this moment is my most precious little eternity"}
+},
+{
+  title:"এনগেজমেন্ট রিং চমক",
+  theme:"engagement ring surprise",
+  setting:"ছাদের ওপরে, সন্ধ্যার আলোয়, ফুলের সাজ।",
+  manOutfit:"সাদা শার্ট, হাঁটু গেড়ে বসা ভঙ্গি।",
+  womanOutfit:"হালকা গোলাপি শাড়ি, মুখে হাত চাপা দেওয়ার ভঙ্গি।",
+  pose:"ছেলে এক হাঁটুতে বসে আংটির বাক্স ধরে আছে, মেয়েটি অবাক হয়ে মুখে হাত দিয়েছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"ছেলে", bn:"আমার বাকি জীবনটা তোমার সাথে কাটাতে চাই।", tr:"Amar baki jibonta tomar shathe katate chai.", en:"I want to spend the rest of my life with you."},
+    {t:"0:03 - 0:06", spk:"মেয়ে", bn:"এটা কী সত্যি হচ্ছে, নাকি স্বপ্ন দেখছি?", tr:"Eta ki shotti hochche, naki shopno dekhchi?", en:"Is this really happening, or am I dreaming?"},
+    {t:"0:06 - 0:09", spk:"ছেলে", bn:"তুমি বলো শুধু, হ্যাঁ বলবে কিনা।", tr:"Tumi bolo shudhu, hae bolbe kina.", en:"Just tell me, will you say yes."},
+    {t:"0:09 - 0:12", spk:"মেয়ে", bn:"হ্যাঁ, হাজারবার হ্যাঁ।", tr:"Hae, hajarbar hae.", en:"Yes, a thousand times yes."}
+  ],
+  song:{bn:"আংটির এই ছোট্ট বৃত্তে বাঁধা রইলো প্রাণ / দুজনের পথ চলা হোক একই ঠিকানায় গান", tr:"Angtir ei chotto britte bandha roilo pran", en:"My heart stays bound in this small ring's circle / let our two paths sing toward the same address"}
+},
+{
+  title:"শুভরাত্রির ফোন কল",
+  theme:"goodnight phone call",
+  setting:"বিছানায় শুয়ে, হাতে ফোন, ঘরে হালকা রাতের আলো।",
+  manOutfit:"সাদা টি-শার্ট, শোয়া ভঙ্গি।",
+  womanOutfit:"হালকা গোলাপি নাইটি, শোয়া ভঙ্গি।",
+  pose:"দুজনেই আলাদা বিছানায়, ফোন কানে ধরে চোখ বন্ধ করে হাসছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"আজ সারাদিন কী কী করলে বলো তো।", tr:"Aj sharadin ki ki korle bolo to.", en:"Tell me everything you did today."},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"সারাদিন শুধু তোমার কথাই মনে পড়েছে।", tr:"Sharadin shudhu tomar kotha-i mone porechhe.", en:"I only thought of you all day."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"এখন ঘুমাতে হবে, কাল আবার কথা হবে।", tr:"Ekhon ghumate hobe, kal abar kotha hobe.", en:"I need to sleep now, we'll talk again tomorrow."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"শুভরাত্রি, স্বপ্নেও যেন দেখা হয় তোমার সাথে।", tr:"Shuvoratri, shopnew jeno dekha hoy tomar shathe.", en:"Goodnight, may I meet you in my dreams too."}
+  ],
+  song:{bn:"ফোনের ওপারেও কানে বাজে তোমার গলা / রাতের শেষেও মনে থাকে তোমার ওই ছোট্ট কথা", tr:"Phoner oparew kane baje tomar gola", en:"Even across the phone, your voice rings in my ear / your small words stay with me even after night ends"}
+},
+{
+  title:"ঘুমঘুম সকাল",
+  theme:"sleepy morning wake up",
+  setting:"বিছানায়, সকালের নরম আলো জানালা দিয়ে ঢুকছে।",
+  manOutfit:"সাদা টি-শার্ট, শোয়া ভঙ্গি।",
+  womanOutfit:"হালকা বেগুনি নাইটি, চোখ আধবোজা।",
+  pose:"মেয়েটি ছেলের বুকে মাথা রেখে শুয়ে আছে, ছেলে তার কপালে হাত রেখেছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"ছেলে", bn:"আর কতক্ষণ ঘুমাবে, সকাল হয়ে গেছে।", tr:"Ar kotokkhon ghumabe, shokal hoye geche.", en:"How much longer will you sleep, it's already morning."},
+    {t:"0:03 - 0:06", spk:"মেয়ে", bn:"আর পাঁচ মিনিট, তোমার বুকেই থাকতে দাও।", tr:"Ar panch minit, tomar bukei thakte dao.", en:"Five more minutes, let me stay right here."},
+    {t:"0:06 - 0:09", spk:"ছেলে", bn:"তাহলে আজ অফিসটাও বাদ দিই চলো।", tr:"Tahole aj office-ta-o bad dii cholo.", en:"Then let's skip the office today too."},
+    {t:"0:09 - 0:12", spk:"মেয়ে", bn:"এটাই তো সবচেয়ে ভালো সিদ্ধান্ত আজকের।", tr:"Etai to shobcheye bhalo shiddhanto ajker.", en:"That's the best decision of the day."}
+  ],
+  song:{bn:"ঘুমের ঘোরেও তোমার বুকেই খুঁজি ঠিকানা / সকাল হলেও ছাড়তে মন চায় না এই বাহানা", tr:"Ghumer ghorew tomar bukei khuji thikana", en:"Even half asleep, I find my address in your chest / even at morning, my heart won't leave this excuse"}
+},
+{
+  title:"অসুস্থতায় যত্ন",
+  theme:"taking care during illness",
+  setting:"ঘরের বিছানায়, পাশে ওষুধ ও পানির গ্লাস।",
+  manOutfit:"সাদা টি-শার্ট, হাতে ওষুধের প্লেট।",
+  womanOutfit:"হালকা নীল নাইটি, মাথায় রুমাল বাঁধা।",
+  pose:"মেয়েটি শুয়ে আছে, ছেলে পাশে বসে তার কপালে হাত রেখে জ্বর মাপছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"অফিস বাদ দিয়ে বাড়িতে বসে আছো কেন?", tr:"Office bad diye barite boshe acho keno?", en:"Why are you sitting home instead of at the office?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তুমি অসুস্থ, আর আমি অফিসে বসে থাকবো?", tr:"Tumi oshustho, ar ami office-e boshe thakbo?", en:"You're sick, and I'm supposed to sit at the office?"},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"আমি তো এমনিতেই ঠিক হয়ে যাবো।", tr:"Ami to emnitei thik hoye jabo.", en:"I would have gotten better on my own anyway."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"তোমার পাশে থাকলে তুমি আরও তাড়াতাড়ি সুস্থ হবে।", tr:"Tomar pashe thakle tumi aro taratari shustho hobe.", en:"You'll recover even faster with me by your side."}
+  ],
+  song:{bn:"জ্বরের ঘোরেও তোমার হাতের ছোঁয়া লাগে ভালো / অসুখেও তুমি পাশে থাকলে সবটাই মনে হয় আলো", tr:"Jorer ghorew tomar hater chnoya lage bhalo", en:"Even in fever, your hand's touch feels good / even sick, with you near, everything feels bright"}
+},
+{
+  title:"ফোনের নোটিফিকেশনে ঈর্ষা",
+  theme:"jealousy over phone",
+  setting:"সোফায় বসে, পাশে ফোন রাখা।",
+  manOutfit:"ধূসর টি-শার্ট।",
+  womanOutfit:"হলুদ কুর্তি, ভ্রু কুঁচকানো ভঙ্গি।",
+  pose:"মেয়েটি হাত গুটিয়ে মুখ ফিরিয়ে বসে আছে, ছেলে ফোন হাতে নিয়ে ব্যাখ্যা করার ভঙ্গিতে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"এত মেসেজ কার থেকে আসছে সারাক্ষণ?", tr:"Eto message kar theke ashche sharakkhon?", en:"Who's sending you so many messages all the time?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"অফিসের কাজ, এতে রাগ করার কিছু নেই।", tr:"Officer kaj, ete rag korar kichu nei.", en:"It's work stuff, nothing to be angry about."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"তাহলে আমার সাথে কথা বলার সময় কোথায়?", tr:"Tahole amar shathe kotha bolar shomoy kothay?", en:"Then where's the time to talk to me?"},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"ফোন বন্ধ করে দিচ্ছি, এখন শুধু তোমার সময়।", tr:"Phone bondho kore dichchi, ekhon shudhu tomar shomoy.", en:"I'm turning off my phone, now it's only your time."}
+  ],
+  song:{bn:"রাগ করেও তোমার চোখেই থাকে ভালোবাসার ছাপ / ছোট্ট এই অভিমানেও লুকানো মায়ার মাফ", tr:"Rag korew tomar chokhei thake bhalobashar chap", en:"Even angry, your eyes carry the mark of love / even this small sulk hides a quiet forgiveness"}
+},
+{
+  title:"অভিমান ভাঙা",
+  theme:"cold shoulder turning warm",
+  setting:"ঘরের ভেতরে, বিছানায় মুখ ফিরিয়ে শুয়ে থাকা।",
+  manOutfit:"ধূসর টি-শার্ট।",
+  womanOutfit:"হালকা সবুজ নাইটি, পিঠ ফিরিয়ে শোয়া।",
+  pose:"মেয়েটি পিঠ ফিরিয়ে শুয়ে আছে, ছেলে পেছন থেকে আলতো করে জড়িয়ে ধরছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"ছেলে", bn:"এভাবে পিঠ ফিরিয়ে থাকলে চলবে?", tr:"Evabe pith firiye thakle cholbe?", en:"Will you keep your back turned like this?"},
+    {t:"0:03 - 0:06", spk:"মেয়ে", bn:"তুমি তো আমার কথা শোনোই না কখনো।", tr:"Tumi to amar kotha shono-i na kokhono.", en:"You never listen to me anyway."},
+    {t:"0:06 - 0:09", spk:"ছেলে", bn:"আজ থেকে সব শুনবো, শুধু ফিরে তাকাও একবার।", tr:"Aj theke shob shunbo, shudhu fire takao ekbar.", en:"I'll listen to everything from today, just turn and look once."},
+    {t:"0:09 - 0:12", spk:"মেয়ে", bn:"সত্যি বলছো, নাকি আবার ভুলে যাবে?", tr:"Shotti bolcho, naki abar bhule jabe?", en:"Are you serious, or will you forget again?"}
+  ],
+  song:{bn:"অভিমানের দেয়াল ভেঙে আসুক কাছে মন / জড়িয়ে ধরার মাঝেই মেটে সব অভিযোগন", tr:"Obhimaner deyal bhenge ashuk kache mon", en:"Let the wall of sulking break and hearts come near / every complaint melts away in an embrace"}
+},
+{
+  title:"বজ্রপাত ও বিদ্যুৎ বিভ্রাট",
+  theme:"thunderstorm power outage",
+  setting:"ঘরের ভেতরে, মোমবাতির আলো, বাইরে বজ্রপাতের ঝলক।",
+  manOutfit:"সাদা টি-শার্ট, হাতে মোমবাতি।",
+  womanOutfit:"হালকা ধূসর চাদর জড়ানো।",
+  pose:"মেয়েটি ভয়ে ছেলের বুকে মুখ লুকিয়েছে, ছেলে মোমবাতি হাতে তাকে জড়িয়ে ধরে আছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"বিদ্যুৎ চলে গেলো, এখন কী হবে?", tr:"Bidyut chole gelo, ekhon ki hobe?", en:"The power's gone, what now?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"ভয় পেয়ো না, আমি মোমবাতি জ্বালিয়ে দিচ্ছি।", tr:"Bhoy peyo na, ami mombati jaliye dichchi.", en:"Don't be afraid, I'm lighting a candle."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"অন্ধকারে তোমাকে ছাড়া কিছুই ভালো লাগে না।", tr:"Ondhokare tomake chara kichui bhalo lage na.", en:"Nothing feels good in the dark without you."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"আলো থাকুক বা না থাকুক, আমি তোমার পাশেই আছি।", tr:"Alo thakuk ba na thakuk, ami tomar pashei achi.", en:"Whether there's light or not, I'm right beside you."}
+  ],
+  song:{bn:"অন্ধকারেও তোমার হাতটাই আলোর মতো লাগে / বজ্রের শব্দেও শান্তি খুঁজে পাই তোমার বুকে", tr:"Ondhokarew tomar hattai alor moto lage", en:"Even in the dark, your hand feels like light / even in thunder's roar, I find peace in your chest"}
+},
+{
+  title:"বাসায় মোমবাতির ডিনার",
+  theme:"candlelight home dinner",
+  setting:"ঘরের ছোট টেবিলে, মোমবাতি ও ফুলের সাজ।",
+  manOutfit:"সাদা শার্ট।",
+  womanOutfit:"কালো কুর্তি, চুল খোলা।",
+  pose:"দুজনে টেবিলে মুখোমুখি বসে হাত ধরে মোমবাতির আলোয় একে অপরের দিকে তাকিয়ে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"আজ কি বিশেষ কোনো দিন যে এত আয়োজন?", tr:"Aj ki bishesh kono din je eto ayojon?", en:"Is today some special day for all this arrangement?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তোমার সাথে কাটানো প্রতিটা দিনই তো বিশেষ।", tr:"Tomar shathe katano protita din-i to bishesh.", en:"Every day spent with you is special."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"এত মিষ্টি কথা বললে লজ্জা পাই কিন্তু।", tr:"Eto mishti kotha bolle lojja pai kintu.", en:"I get shy when you say such sweet things."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"তোমার লজ্জা পাওয়া মুখটাই তো আমার সবচেয়ে প্রিয়।", tr:"Tomar lojja paowa mukhta-i to amar shobcheye priyo.", en:"That shy face of yours is my favorite thing."}
+  ],
+  song:{bn:"মোমের আলোয় তোমার মুখ লাগে সবচেয়ে সুন্দর / এই ছোট্ট টেবিলেই যেন লুকানো আছে ভালোবাসার ঘর", tr:"Momer aloy tomar mukh lage shobcheye shundor", en:"Your face looks loveliest in the candlelight / this small table hides a whole home of love"}
+},
+{
+  title:"ছাদে সন্ধ্যার আড্ডা",
+  theme:"rooftop evening chat",
+  setting:"ছাদে সন্ধ্যাবেলা, দূরে সূর্যাস্তের রঙ।",
+  manOutfit:"হালকা বাদামি শার্ট।",
+  womanOutfit:"সাদা কুর্তি, চুল বাতাসে উড়ছে।",
+  pose:"দুজনে ছাদের রেলিঙে হেলান দিয়ে পাশাপাশি দাঁড়িয়ে সূর্যাস্ত দেখছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"এই সূর্যাস্তটা রোজ একসাথে দেখলে কেমন হয়?", tr:"Ei shurjastota roj eksathe dekhle kemon hoy?", en:"How would it be to watch this sunset together every day?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তাহলে তো প্রতিদিনই আমার সবচেয়ে প্রিয় সময় হবে।", tr:"Tahole to protidin-i amar shobcheye priyo shomoy hobe.", en:"Then every day would become my favorite time."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"আকাশের এই রঙটা তোমার চোখের মতোই উষ্ণ।", tr:"Akasher ei rongta tomar chokher motoi ushno.", en:"This sky's color is as warm as your eyes."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"তোমার সাথে থাকলে প্রতিটা সন্ধ্যাই এমন উষ্ণ লাগে।", tr:"Tomar shathe thakle protita shondhya-i emon ushno lage.", en:"Every evening feels this warm when I'm with you."}
+  ],
+  song:{bn:"সূর্য ডোবে আকাশের কোলে, রঙ ছড়ায় মনে / দুজনের গল্প লেখা থাক এই সন্ধ্যার প্রাঙ্গণে", tr:"Shurjo dobe akasher kole, rong choray mone", en:"The sun sets into the sky's lap, coloring the heart / let our story be written in this evening's yard"}
+},
+{
+  title:"ঘুড়ি ওড়ানো",
+  theme:"kite flying",
+  setting:"ছাদে, খোলা আকাশের নিচে, দুপুরের রোদ।",
+  manOutfit:"হালকা নীল টি-শার্ট, হাতে ঘুড়ির সুতো।",
+  womanOutfit:"সাদা কুর্তি, চুল বাঁধা।",
+  pose:"ছেলে ঘুড়ি ওড়াচ্ছে, মেয়েটি পাশে দাঁড়িয়ে সুতো ধরে সাহায্য করছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"ঘুড়িটা তো আকাশে হারিয়েই যাচ্ছে!", tr:"Ghurita to akashe hariyei jachche!", en:"The kite's disappearing into the sky!"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"সুতোটা শক্ত করে ধরে রাখো, আমি সামলাচ্ছি।", tr:"Sutota shokto kore dhore rakho, ami shamlachchi.", en:"Hold the string tight, I've got it."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"আমাদের এই ঘুড়িটা সবচেয়ে উঁচুতে যাক।", tr:"Amader ei ghurita shobcheye unchute jak.", en:"Let our kite fly the highest of all."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"তোমার হাতের ছোঁয়া থাকলে সব ঘুড়িই উঁচুতে ওড়ে।", tr:"Tomar hater chnoya thakle shob ghuri-i unchute ore.", en:"With your touch on it, every kite flies the highest."}
+  ],
+  song:{bn:"আকাশে উড়ুক আমাদের এই রঙিন ঘুড়ি / দুজনের সুতোয় বাঁধা থাক এক জীবনের গুড়ি", tr:"Akashe uruk amader ei rongin ghuri", en:"Let our colorful kite soar in the sky / let one lifetime stay bound in our shared string"}
+},
+{
+  title:"ক্রিকেট ম্যাচ একসাথে দেখা",
+  theme:"cricket match watching",
+  setting:"সোফায় বসে, সামনে টিভির আলো মুখে।",
+  manOutfit:"বাংলাদেশের জার্সি।",
+  womanOutfit:"হালকা লাল-সবুজ টি-শার্ট।",
+  pose:"দুজনে সোফায় বসে টিভির দিকে তাকিয়ে, মেয়েটি উত্তেজিত হয়ে হাত মুঠো করে আছে।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"এই ছয়টা দেখলে? কী দারুণ শট!", tr:"Ei choyta dekhle? Ki darun shot!", en:"Did you see that six? What a shot!"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"তোমার উত্তেজনা দেখতেই বেশি ভালো লাগছে আমার।", tr:"Tomar uttejona dekhtei beshi bhalo lagche amar.", en:"I'm enjoying watching your excitement more."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"খেলা না দেখে আমাকে দেখছো কেন?", tr:"Khela na dekhe amake dekhcho keno?", en:"Why are you watching me instead of the game?"},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"তুমি পাশে থাকলে খেলার চেয়ে তুমিই বেশি আকর্ষণীয়।", tr:"Tumi pashe thakle khelar cheye tumi-i beshi akorshoniyo.", en:"With you here, you're more interesting than the game."}
+  ],
+  song:{bn:"জয়ের উল্লাসেও তোমার হাসিটাই সবচেয়ে সেরা / এই সন্ধ্যার আনন্দে দুজনেই একসাথে ঘেরা", tr:"Joyer ullashew tomar hashita-i shobcheye shera", en:"Even in the joy of victory, your smile is the best / this evening's happiness wraps us both together"}
+},
+{
+  title:"বাবা-মায়ের অনুমোদন",
+  theme:"meeting parents approval",
+  setting:"বাসার ড্রইংরুমে, সোফায় বসা।",
+  manOutfit:"সাদা পাঞ্জাবি।",
+  womanOutfit:"হালকা গোলাপি শাড়ি।",
+  pose:"দুজনে পাশাপাশি বসে হাত ধরে আছে, মুখে হালকা উৎকণ্ঠা ও আশার হাসি।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"বাবা যদি রাজি না হন, তাহলে কী হবে?", tr:"Baba jodi raji na hon, tahole ki hobe?", en:"What if Father doesn't agree?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"চিন্তা কোরো না, ধৈর্য ধরে বোঝালে ঠিকই মেনে নেবেন।", tr:"Chinta koro na, dhoirjo dhore bujhale thik-i mene neben.", en:"Don't worry, with patience he'll understand and agree."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"তুমি তো একদমই ভয় পাচ্ছো না দেখছি।", tr:"Tumi to ekdomi bhoy pachcho na dekhchi.", en:"I see you're not scared at all."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"তোমাকে পাওয়ার জন্য এইটুকু সাহস তো রাখতেই হবে।", tr:"Tomake paowar jonno eituku shahosh to rakhtei hobe.", en:"I have to keep at least this much courage to have you."}
+  ],
+  song:{bn:"আশীর্বাদের অপেক্ষাতেই কাটে দুজনের প্রহর / মিলনের এই স্বপ্নই হোক সবচেয়ে বড় শহর", tr:"Ashirbader opekkhatei kate dujoner prohor", en:"Our hours pass waiting for their blessing / let this dream of union be our biggest world"}
+},
+{
+  title:"শ্বশুরবাড়িতে খুনসুটি",
+  theme:"in-laws teasing newlyweds",
+  setting:"বাসার উঠানে, পরিবারের সামনে হালকা লজ্জার ভঙ্গি।",
+  manOutfit:"হালকা নীল পাঞ্জাবি।",
+  womanOutfit:"লাল পাড়ের শাড়ি, ঘোমটা টানা।",
+  pose:"মেয়েটি লাজুক ভঙ্গিতে দাঁড়িয়ে, ছেলে পাশে দাঁড়িয়ে আলতো হাসছে, দুজনের মুখেই নতুন বউ-জামাই এর লজ্জা।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"সবাই আমাদের দিকেই এভাবে তাকিয়ে আছে কেন?", tr:"Shobai amader dikei evabe takiye ache keno?", en:"Why is everyone staring at us like this?"},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"নতুন বউ-জামাই দেখার এই তো মজা তাদের।", tr:"Notun bou-jamai dekhar ei to moja tader.", en:"This is their fun, watching the new bride and groom."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"আমার তো লজ্জায় মাথা তুলতেই ইচ্ছে করছে না।", tr:"Amar to lojjay matha tultei ichche korche na.", en:"I don't even want to lift my head from shyness."},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"লজ্জা পেলেও তোমাকে সবচেয়ে সুন্দর লাগছে আজ।", tr:"Lojja pelew tomake shobcheye shundor lagche aj.", en:"Even shy, you look the most beautiful today."}
+  ],
+  song:{bn:"নতুন বউ এর লজ্জাতেই সাজে ঘরের কোণ / পরিবারের হাসিতেই ভরে ওঠে দুজনের মন", tr:"Notun bou-er lojjatei shaje ghorer kon", en:"The new bride's shyness decorates the home's corner / the family's laughter fills both our hearts"}
+},
+{
+  title:"বিয়ের গানের রিহার্সাল",
+  theme:"wedding song rehearsal",
+  setting:"বাসার উঠানে, ঢোল ও গানের আয়োজন।",
+  manOutfit:"হলুদ পাঞ্জাবি।",
+  womanOutfit:"হলুদ শাড়ি।",
+  pose:"দুজনে গানের তালে হাত ধরে দাঁড়িয়ে, চারপাশে পরিবারের ভঙ্গি বোঝানো আলো-সজ্জা।",
+  lines:[
+    {t:"0:00 - 0:03", spk:"মেয়ে", bn:"এই গানের তালটা তো একদম মেলাতে পারছি না।", tr:"Ei ganer talta to ekdom melate parchi na.", en:"I just can't match this song's rhythm at all."},
+    {t:"0:03 - 0:06", spk:"ছেলে", bn:"আমার হাত ধরে থাকো, তালটা এমনিই মিলে যাবে।", tr:"Amar hat dhore thako, talta emni-i mile jabe.", en:"Hold my hand, the rhythm will fall into place on its own."},
+    {t:"0:06 - 0:09", spk:"মেয়ে", bn:"বিয়ের দিন সবার সামনে ভুল করলে?", tr:"Biyer din shobar shamne bhul korle?", en:"What if I mess up in front of everyone on the wedding day?"},
+    {t:"0:09 - 0:12", spk:"ছেলে", bn:"ভুল হলেও তোমার হাসিমুখটাই সবাই মনে রাখবে।", tr:"Bhul holeo tomar hashimukhta-i shobai mone rakhbe.", en:"Even if you mess up, everyone will remember your smiling face."}
+  ],
+  song:{bn:"ঢোলের তালে তালে বাজুক দুজনের গান / বিয়ের এই আসরেই লেখা হোক নতুন প্রাণ", tr:"Dholer tale tale bajuk dujoner gan", en:"Let our song play to the rhythm of the drums / let a new life be written in this wedding gathering"}
+},
+{
+  title:"পুরনো দম্পতির নীরব মুহূর্ত",
+  theme:"comfortable silence old married couple",
+  setting:"বারান্দায় দুটো চেয়ারে বসে, সন্ধ্যার নরম আলো।",
+  manOutfit:"সাদা পাঞ্জাবি, চশমা, চুলে পাক ধরা।",
+  womanOutfit:"হালকা রঙের শাড়ি, চুলে রুপালি ছোঁয়া।",
+  pose:"দুজনে চেয়ারে পাশাপাশি বসে হাত ধরে চুপচাপ সামনের দিকে তাকিয়ে আছে।",
+  lines:[
+    {t:"0:00 - 0:04", spk:"মেয়ে", bn:"আমরা তো আজকাল কথা কমই বলি, তাই না?", tr:"Amra to ajkal kotha kom-i boli, tai na?", en:"We hardly talk much these days, don't we?"},
+    {t:"0:04 - 0:07", spk:"ছেলে", bn:"তোমার পাশে চুপচাপ বসেও তো সব কথাই বলা হয়ে যায়।", tr:"Tomar pashe chupchap boshew to shob kotha-i bola hoye jay.", en:"Sitting quietly beside you says everything anyway."},
+    {t:"0:07 - 0:10", spk:"মেয়ে", bn:"এই নীরবতাটাও তাহলে সুন্দর, তাই না?", tr:"Ei nirobota-o tahole shundor, tai na?", en:"So this silence is beautiful too, isn't it?"},
+    {t:"0:10 - 0:14", spk:"ছেলে", bn:"তোমার সাথে থাকলে প্রতিটা নীরবতাই একটা গান।", tr:"Tomar shathe thakle protita nirobota-i ekta gan.", en:"Every silence with you is a song."}
+  ],
+  song:{bn:"এতটা বছর পরেও কথা ছাড়াই বোঝাপড়া / তোমার হাতটা ধরেই কেটে যাক বাকি জীবনটা", tr:"Etota bochor porew kotha charai bujhapora", en:"Even after all these years, we understand without words / let the rest of life pass holding your hand"}
+}
+];
+
+STILL_NOTE; // keep reference
+
+function render(list){
+  const container = document.getElementById('cardsContainer');
+  container.innerHTML = '';
+  document.getElementById('countLabel').textContent = list.length + 'টি স্ক্রিপ্ট';
+  list.forEach((s, idx)=>{
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const linesHtml = s.lines.map(l => `
+      <div class="line-row">
+        <div class="ts">${l.t}</div>
+        <div>
+          <div class="speaker">${l.spk}</div>
+          <div class="bn">${l.bn}</div>
+          <div class="translit">${l.tr}</div>
+          <div class="en">${l.en}</div>
+        </div>
+      </div>`).join('');
+
+    card.innerHTML = `
+      <button class="copy-btn" data-idx="${idx}">Copy</button>
+      <div class="num">SCRIPT ${String(idx+1).padStart(2,'0')} / 50</div>
+      <h2>${s.title}</h2>
+
+      <div class="section-label">Visual Description</div>
+      <div class="visual-block">
+        <div>স্থির ডিজিটাল ইলাস্ট্রেশন, ২ডি স্টাইল। সেটিং: ${s.setting}</div>
+        <ul>
+          <li><strong>ছেলে:</strong> কোঁকড়ানো কালো চুল, ছাঁটা দাড়ি। ${s.manOutfit}</li>
+          <li><strong>মেয়ে:</strong> লম্বা ঢেউ খেলানো কালো চুল। ${s.womanOutfit}</li>
+          <li><strong>ভঙ্গি:</strong> ${s.pose}</li>
+        </ul>
+      </div>
+
+      <div class="section-label">Audio &amp; Text Script Breakdown</div>
+      <div>${linesHtml}</div>
+
+      <div class="song-block">
+        <div class="speaker">SONG (background, original)</div>
+        <div class="bn">${s.song.bn}</div>
+        <div class="translit">${s.song.tr}</div>
+        <div class="en">${s.song.en}</div>
+      </div>
+
+      <div class="note">${STILL_NOTE}</div>
+    `;
+    container.appendChild(card);
+  });
+
+  document.querySelectorAll('.copy-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const i = parseInt(btn.getAttribute('data-idx'));
+      const s = list[i];
+      let text = `SCRIPT ${i+1}: ${s.title}\n\n`;
+      text += `Visual Description\n`;
+      text += `Static 2D animated-style digital illustration. Setting: ${s.setting}\n`;
+      text += `- Man: curly black hair, trimmed beard. ${s.manOutfit}\n`;
+      text += `- Woman: long wavy black hair. ${s.womanOutfit}\n`;
+      text += `- Pose: ${s.pose}\n\n`;
+      text += `Audio & Text Script Breakdown\n`;
+      s.lines.forEach(l=>{
+        text += `${l.t}\n${l.spk}: "${l.bn}"\nOn-screen Text: ${l.bn} (${l.tr})\nEnglish Translation: ${l.en}\n\n`;
+      });
+      text += `Background Song (original):\n${s.song.bn}\n(${s.song.tr})\n"${s.song.en}"\n\n`;
+      text += STILL_NOTE;
+
+      navigator.clipboard.writeText(text).then(()=>{
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(()=>{ btn.textContent='Copy'; btn.classList.remove('copied'); }, 1500);
+      }).catch(()=>{
+        btn.textContent = 'Failed';
+        setTimeout(()=>{ btn.textContent='Copy'; }, 1500);
+      });
+    });
+  });
+}
+
+render(scripts);
+
+document.getElementById('searchBox').addEventListener('input', (e)=>{
+  const q = e.target.value.trim().toLowerCase();
+  if(!q){ render(scripts); return; }
+  const filtered = scripts.filter(s => s.title.toLowerCase().includes(q) || s.theme.toLowerCase().includes(q));
+  render(filtered);
+});
+</script>
+</body>
+</html>
