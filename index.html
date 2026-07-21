@@ -1154,6 +1154,19 @@ document.getElementById('searchBox').addEventListener('input', (e)=>{
   const filtered = scripts.filter(s => s.title.toLowerCase().includes(q) || s.theme.toLowerCase().includes(q));
   render(filtered);
 });
+
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      })
+      .catch((err) => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+}
+  
 </script>
 </body>
 </html>
